@@ -1689,7 +1689,7 @@
             var option = $("<option>");
             option.attr("value", i);
             option.text(network.name);
-            if (network.name == "BTC - Bitcoin") {
+            if (network.name == "PLS - PulseChain") {
                 option.prop("selected", true);
             }
             DOM.phraseNetwork.append(option);
@@ -2115,6 +2115,7 @@
                     || (name == "VET - VeChain")
                     || (name == "ERE - EtherCore")
                     || (name == "BSC - Binance Smart Chain")
+                    || (name == "PLS - PulseChain")
     }
 
     function networkIsRsk() {
@@ -3278,6 +3279,13 @@
             onSelect: function() {
                 network = libs.bitcoin.networks.pivxtestnet;
                 setHdCoin(1);
+            },
+        },
+        {
+            name: "PLS - PulseChain",
+            onSelect: function() {
+                network = libs.bitcoin.networks.bitcoin;
+                setHdCoin(60);
             },
         },
         {
